@@ -235,7 +235,6 @@ function init() {
   }
 
   function deleteFavorite(idMongoDelete) {
-    console.log(idMongoDelete)
     new RequestAPI(`${CONFIG.baseURL}bookmark/${idMongoDelete}`, 'DELETE', {
       "token": localStorage.getItem("tokenUser")
     })

@@ -31,7 +31,7 @@ class RequestAPI {
         })
         .then(datas => resolve(datas))
         .catch(err => {
-            console.log("Il semble qu'il y ait eu une erreur, veuillez nous excusez pour ce léger désagrémengt.");
+            console.error("Il semble qu'il y ait eu une erreur, veuillez nous excusez pour ce léger désagrémengt.");
             return reject(err)
         })
     });
