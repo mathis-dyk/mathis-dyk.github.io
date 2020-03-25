@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <aside>
+        <div class="aside-signet"><img src='./assets/icons/open-menu.png' alt='' /></div>
+        <div class="aside-disconnect"><img src='./assets/icons/logout.png' alt='' /></div>
+        <form class="form-login">
+            <p>Connectez vous !</p>
+            <input class="login-mail" type="mail" placeholder="E-Mail" />
+            <input class="login-password" type="password" placeholder="Password" />
+            <input type="submit" value="Login" />
+            <button>Vous n'avez pas encore de compte ? Inscrivez vous !</button>
+        </form>
+
+        <form class="form-register">
+            <p>Inscrivez vous !</p>
+            <input class="register-mail" type="mail" placeholder="Email" />
+            <input class="register-password" type="Password" placeholder="Password" />
+            <input class="register-firstname" type="text" name="firstName" placeholder="Firstanme" />
+            <input class="register-lastname" type="text" name="lastName" placeholder="LastName" />
+            <input type="submit" value="Register" />
+            <p class="form-register_error"></p>
+        </form>
+
+        <div class="aside-favorites">
+            <p>Bonjour<br />
+                <span></span></p>
+            <p>Mes favoris</p>
+            <ul>
+                Vous n'avez pas de favoris pour le moment !
+            </ul>
+        </div>
+    </aside>
+
+    <main>
+        <h1>ConfiNews</h1>
+        <p>Non consequat cupidatat amet deserunt cupidatat nostrud velit cillum consequat. Eu minim consectetur incididunt enim veniam excepteur. Consectetur nulla irure laboris ex in. Adipisicing Lorem sunt sunt esse duis ut velit duis qui velit fugiat magna voluptate.</p>
+        <form class="formSource">
+            <select class="sourcesSelect"></select>
+            <input type="text" class="keywordsInput" placeholder="Rechercher des mots clefs" />
+            <div class="formConfirm">
+                <input type="submit" value="Valider" />
+                <button class="reset">Reset</button>
+                <button class="addSourceToFavorites">Add source to favorites</button>
+            </div>
+        </form>
+        <section class="section-articles">
+        </section>
+
+        <div class="errorPanel">
+            <h3>Error</h3>
+            <p>Bonjour, ceci est une erreur</p>
+        </div>
+
+        <div class="goodPanel">
+            <h3>Super !</h3>
+            <p>L'action s'est bien déroulée</p>
+        </div>
+    </main>
+
+    <script src="js/RequestAPI.js"></script>
+    <script src="js/tools.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

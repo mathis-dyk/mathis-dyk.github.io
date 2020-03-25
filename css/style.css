@@ -1,0 +1,327 @@
+@font-face {
+  font-family: "Fengardo Neue";
+  src: url("../assets/fonts/FengardoNeueBlack.otf") format("otf");
+  src: url("../assets/fonts/FengardoNeueBlack.ttf") format("ttf"), url("../assets/fonts/FengardoNeueBlack.woff") format("woff"), url("../assets/fonts/FengardoNeueBlack.woff2") format("woff2");
+  font-weight: bolder;
+}
+
+body {
+  background: #121212;
+  color: #CFCFCF;
+  font-size: 21px;
+  font-family: "Georgia";
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+h1 {
+  color: #f50029cb;
+  font-family: "Fengardo Neue";
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 48px;
+  margin-bottom: 32px;
+}
+
+p {
+  line-height: 32px;
+}
+
+input[type="submit"], .reset, .addSourceToFavorites {
+  background: #f50029cb;
+  display: inline-block;
+  width: 200px;
+  color: #CFCFCF;
+  border: none;
+  height: 40px;
+  text-align: left;
+  padding-left: 20px;
+  font-family: "Fengardo Neue";
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.formConfirm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.formConfirm .reset {
+  margin-left: 30px;
+}
+
+form.formSource {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form.formSource select {
+  height: 40px;
+  margin-top: 30px;
+  color: white;
+  background: #121212;
+  border: solid 1px #f50029cb;
+}
+
+form.formSource input[type="text"] {
+  border: none;
+  border-bottom: solid 1px #CFCFCF;
+  background: #121212;
+  padding: 20px 5px;
+  color: #CFCFCF;
+  font-family: "Fengardo Neue";
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.form-login, .form-register, .aside-favorites {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+.form-login ul, .form-register ul, .aside-favorites ul {
+  margin: 0;
+}
+
+.form-login ul li h3, .form-register ul li h3, .aside-favorites ul li h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.form-login input:not([type="submit"]), .form-register input:not([type="submit"]), .aside-favorites input:not([type="submit"]) {
+  background: #121212;
+  border: none;
+  border-bottom: solid 1px #CFCFCF;
+  color: white;
+  height: 40px;
+  margin-top: 20px;
+  padding-left: 20px;
+  font-family: "Fengardo Neue";
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.form-login button, .form-register button, .aside-favorites button {
+  font-size: 14px;
+  font-family: "Georgia";
+  border: none;
+  background: #121212;
+  color: #CFCFCF;
+  margin-top: 20px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.form-login p, .form-register p, .aside-favorites p {
+  color: #f50029cb;
+  margin-top: 30px;
+  font-family: "Fengardo Neue";
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.aside-favorites {
+  display: none;
+}
+
+.form-register {
+  margin-top: 100vh;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.form-register.show {
+  margin-top: 50px;
+}
+
+aside {
+  width: 30vw;
+  height: 100vh;
+  position: fixed;
+  right: calc(-30vw - 1px);
+  top: 0;
+  background: #121212;
+  border-left: solid 1px #CFCFCF;
+  -webkit-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+}
+
+aside.open {
+  right: 0;
+}
+
+aside .aside-signet, aside .aside-disconnect {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  background: #f50029cb;
+  top: 20px;
+  left: -41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+aside .aside-signet img, aside .aside-disconnect img {
+  width: 20px;
+}
+
+aside .aside-disconnect {
+  top: 70px;
+  display: none;
+}
+
+aside ul {
+  list-style: none;
+  margin: 30px;
+}
+
+.addSourceToFavorites {
+  display: none;
+  margin-left: 30px;
+}
+
+.favItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.favItem h3 {
+  cursor: pointer;
+}
+
+.favItem .delete {
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.section-articles {
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.section-articles article {
+  width: 60%;
+}
+
+.section-articles article img {
+  border-radius: 5px;
+  width: 70%;
+}
+
+.section-articles article h2 {
+  color: #f50029cb;
+  font-family: "Fengardo Neue";
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.section-articles article span {
+  font-size: 16px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.section-articles article p {
+  margin-bottom: 100px;
+}
+
+.errorPanel, .goodPanel {
+  background: #f50029cb;
+  opacity: 1;
+  position: absolute;
+  bottom: 50px;
+  left: -360px;
+  color: #CFCFCF;
+  width: 300px;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: .2s all ease-in;
+  transition: .2s all ease-in;
+}
+
+.errorPanel.open, .goodPanel.open {
+  left: 0px;
+}
+
+.errorPanel h3, .goodPanel h3 {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Fengardo Neue";
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.errorPanel p, .goodPanel p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.goodPanel {
+  background: rgba(2, 138, 68, 0.667);
+}
+/*# sourceMappingURL=style.css.map */
