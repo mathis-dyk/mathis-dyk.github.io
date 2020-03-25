@@ -117,7 +117,7 @@ form.formSource input[type="text"] {
   border: none;
   border-bottom: solid 1px #CFCFCF;
   color: white;
-  height: 40px;
+  height: 30px;
   margin-top: 20px;
   padding-left: 20px;
   font-family: "Fengardo Neue";
@@ -157,7 +157,7 @@ form.formSource input[type="text"] {
 }
 
 .form-register.show {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 aside {
