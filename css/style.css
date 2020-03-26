@@ -14,6 +14,12 @@ body {
   overflow-x: hidden;
 }
 
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
 main {
   width: 80%;
   margin: auto;
@@ -30,8 +36,20 @@ h1 {
   margin-bottom: 32px;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 27px;
+  }
+}
+
 p {
   line-height: 32px;
+}
+
+@media (max-width: 768px) {
+  p {
+    line-height: 24px;
+  }
 }
 
 input[type="submit"], .reset, .addSourceToFavorites {
@@ -49,6 +67,12 @@ input[type="submit"], .reset, .addSourceToFavorites {
   letter-spacing: 2px;
   margin-top: 30px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  input[type="submit"], .reset, .addSourceToFavorites {
+    margin-top: 20px;
+  }
 }
 
 .formConfirm {
@@ -146,6 +170,12 @@ form.formSource input[type="text"] {
   letter-spacing: 2px;
 }
 
+@media (max-width: 768px) {
+  .form-login p, .form-register p, .aside-favorites p {
+    margin-top: 10px;
+  }
+}
+
 .aside-favorites {
   display: none;
 }
@@ -170,6 +200,13 @@ aside {
   border-left: solid 1px #CFCFCF;
   -webkit-transition: 0.2s all ease-out;
   transition: 0.2s all ease-out;
+}
+
+@media (max-width: 768px) {
+  aside {
+    width: 80vw;
+    right: calc(-80vw - 1px);
+  }
 }
 
 aside.open {
@@ -250,9 +287,21 @@ aside ul {
   width: 60%;
 }
 
+@media (max-width: 768px) {
+  .section-articles article {
+    width: 100%;
+  }
+}
+
 .section-articles article img {
   border-radius: 5px;
   width: 70%;
+}
+
+@media (max-width: 768px) {
+  .section-articles article img {
+    width: 100%;
+  }
 }
 
 .section-articles article h2 {
@@ -265,14 +314,40 @@ aside ul {
   margin-top: 30px;
 }
 
+@media (max-width: 768px) {
+  .section-articles article h2 {
+    font-size: 18px;
+  }
+}
+
+.section-articles article a {
+  text-decoration: none;
+}
+
 .section-articles article span {
   font-size: 16px;
   margin-bottom: 16px;
   display: inline-block;
 }
 
+@media (max-width: 768px) {
+  .section-articles article span {
+    font-size: 12px;
+  }
+}
+
 .section-articles article p {
   margin-bottom: 100px;
+}
+
+@media (max-width: 768px) {
+  .section-articles article p {
+    margin-bottom: 30px;
+  }
+}
+
+.section-articles article p .readMore {
+  color: #f50029cb;
 }
 
 .errorPanel, .goodPanel {

@@ -4,6 +4,10 @@ $red : #f50029cb;
 $black: #121212;
 $white: #CFCFCF;
 
+@mixin mobile {
+    @media (max-width: 768px) { @content; }
+}
+
 // Fonts
 
 @font-face {
@@ -33,6 +37,10 @@ body {
     @include Georgia();
     width: 100%;
     overflow-x: hidden;
+
+    @include mobile {
+        font-size: 14px;
+    }
 }
 
 main {
@@ -46,10 +54,18 @@ h1 {
     @include Fengardo();
     font-size: 48px;
     margin-bottom: 32px;
+
+    @include mobile {
+        font-size: 27px;
+    }
 }
 
 p {
     line-height: 32px;
+
+    @include mobile {
+        line-height: 24px;
+    }
 }
 
 input[type="submit"], .reset, .addSourceToFavorites {
@@ -64,6 +80,10 @@ input[type="submit"], .reset, .addSourceToFavorites {
     @include Fengardo();
     margin-top: 30px;
     cursor: pointer;
+
+    @include mobile {
+        margin-top: 20px;
+    }
 }
 
 .formConfirm {
@@ -139,6 +159,10 @@ form.formSource {
         color: $red;
         margin-top: 30px;
         @include Fengardo();
+
+        @include mobile {
+            margin-top: 10px;
+        }
     }
 }
 
@@ -164,6 +188,11 @@ aside {
     background: $black;
     border-left: solid 1px $white;
     transition: 0.2s all ease-out;
+
+    @include mobile {
+        width: 80vw;
+        right: calc(-80vw - 1px);
+    }
 
     &.open {
         right: 0
@@ -229,9 +258,17 @@ aside {
     article {
         width: 60%;
 
+        @include mobile {
+            width: 100%;
+        }
+
         img {
             border-radius: 5px;
             width: 70%;
+
+            @include mobile {
+                width: 100%;
+            }
         }
 
         h2 {
@@ -239,16 +276,36 @@ aside {
             @include Fengardo();
             font-size: 24px;
             margin-top: 30px;
+
+            @include mobile {
+                font-size: 18px;
+            }
+        }
+
+        a {
+            text-decoration: none;
         }
 
         span {
             font-size: 16px;
             margin-bottom: 16px;
             display: inline-block;
+
+            @include mobile {
+                font-size: 12px;
+            }
         }
 
         p {
             margin-bottom: 100px;
+
+            @include mobile {
+                margin-bottom: 30px;
+            }
+
+            .readMore {
+                color: $red;
+            }
         }
     }
 }

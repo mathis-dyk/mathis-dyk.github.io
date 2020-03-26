@@ -51,10 +51,11 @@ function init() {
         let img = (article.urlToImage != "null" && article.urlToImage != null) ? article.urlToImage : "./assets/img/no-image.png"
         articlesSection.innerHTML += `
             <article>
-                <img src=${img} alt='' />
-                <h2>${article.title}</h2>
+                <a href="${article.url}"><img src=${img} alt='' /></a>
+                <a href="${article.url}"><h2>${article.title}</h2></a>
                 <span>${beautifyDate(article.publishedAt)} 📚 ${ article.source.name } - ${article.author}</span>
-                <p>${article.description}</p>
+                <p>${article.description}<br />
+                <a href="${article.url}" class="readMore">Read More</a></p>
             </article>
             `
       })
@@ -91,6 +92,7 @@ function init() {
     })
 
     let articleList = await articles.callAPI()
+    console.log(articleList)
     articleList = articleList.data.articles
     
     showArticles(articleList)
