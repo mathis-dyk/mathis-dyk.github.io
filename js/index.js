@@ -231,6 +231,8 @@ function init() {
               getFavorites()
             })
           })
+        } else {
+          favorites.innerHTML = "<span>Il semble que vous n'ayez pas de favoris pour le moment.</span>"
         }
       })
     }
